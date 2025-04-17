@@ -164,3 +164,43 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+import { auth } from "./firebase-config.js";
+import{onAuthStateChanged} from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js"; 
+onAuthStateChanged(auth,(user)=>{
+    if(!user){
+        setTimeout(()=>{
+            window.location.href="signup.html";
+        },5000)
+    }
+    else{
+        let username = document.getElementById('usernameappend');
+        const email = user.email;
+        const name = email.split("@")[0];
+        username.innerText= name;
+
+
+    }
+})
+
+let login = document.getElementById('login');
+let signup = document.getElementById('signup');
+let buy = document.getElementById('buy');
+let rent  = document.getElementById('rent');
+document.querySelectorAll('a').forEach(link=>{
+    link.addEventListener('click',(e)=>{
+        e.preventDefault();
+        if(login){
+            window.location.href ='login.html';
+        }
+        if(signup){
+            window.location.href ='signup.html';
+        }
+        if(buy){
+            window.location.href ='Page.html';
+        }
+        if(rent){
+            window.location.href ='Page.html';
+        }
+    })
+})

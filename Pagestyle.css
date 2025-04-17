@@ -368,6 +368,7 @@ header {
     background-color: #235784;
     padding: 12px;
     border-radius: 12px 12px 12px 12px;
+    align-items: center;
     justify-content: center;
 }
 

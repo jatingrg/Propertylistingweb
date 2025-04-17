@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Property Listings - Bangalore</title>
+    <title>Property Listings</title>
     <link rel="stylesheet" href="Pagestyle.css">
 </head>
 
@@ -14,14 +14,17 @@
     <header>
         <div class="container header-container">
             <div class="logo">
-                <img src="logo.png" alt="KeyVista Logo" />
+                <img src="assets\logo.png" alt="KeyVista Logo" />
             </div>
             <nav class="nav-tabs">
-                <a href="#" class="active">Buy</a>
-                <a href="#">Rent</a>
+                <a href="Page.html" id="buy" class="active">Buy</a>
+                <a href="Page.html" id="rent">Rent</a>
                 <a href="#">About Us</a>
-                <a href="#">Login</a>
-                <a href="#">Sign up</a>
+                <a href="login.html" id="login">Login</a>
+                <a href="signup.html" id="signup">Sigin/up</a>
+                <div id="usernameappend"></div>
+
+
             </nav>
         </div>
     </header>
@@ -43,42 +46,57 @@
             </div>
         </div>
 
-        <!-- Other filters -->
-        <div class="filter-tag">Top Localities <span class="dropdown">&#9662;</span></div>
-        <div class="filter-tag">Budget <span class="dropdown">&#9662;</span></div>
-        <div class="filter-tag">Property Type<span class="dropdown">&#9662;</span></div>
-        <div class="filter-tag dropdown-wrapper">
-            <div class="dropdown-trigger">BHK<span class="dropdown">&#9662;</span></div>
-            <div class="dropdown-content">
-                <div class="section">
-                    <div class="option-group">
-                        <button class="option-btn">1BHK</button>
-                        <button class="option-btn">2BHK</button>
-                        <button class="option-btn">3BHK</button>
-                        <button class="option-btn">4BHK</button>
-                        <button class="option-btn">5BHK</button>
-                    </div>
-                </div>
-            </div>
+        <div class ="filter-tag">
+            <select class = "dropdown" id="localities">
+                <option>Top Localities</option>
+                <option value="delhi">Delhi</option>
+                <option value="hyderabad">hyderabad</option>
+                <option value="banglore">Banglore</option>
+                <option value="pune">Pune</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="chennai">Chennai</option>
+                <option value="noida">Noida</option>
+                <option value="gurgaon">Gurgaon</option>
+                <option value="chandigarh">Chandigarh</option>
+             </select>
         </div>
-        <div class="filter-tag dropdown-wrapper">
-            <div class="dropdown-trigger">Posted By<span class="dropdown">&#9662;</span></div>
-            <div class="dropdown-content">
-                <div class="section">
-                    <div class="option-group">
-                        <button class="option-btn ">Owner</button>
-                        <button class="option-btn ">Broker</button>
-                    </div>
-                </div>
-            </div>
+        <div class ="filter-tag">
+            <select class = "dropdown" id="budget">
+                <option>Budget</option>
+                <option value="1000000">10 Lakh</option>
+                <option value="1500000">15 Lakh</option>
+                <option value="2000000">20 Lakh</option>
+                <option value="3500000">35 Lakh</option>
+                <option value="4500000">45 Lakh</option>
+                <option value="5000000">50 Lakh</option>
+                <option value="10000000">1 cr+</option>
+              
+             </select>
         </div>
-        <div class="filter-tag with-badge">
-            <span class="badge">1</span>
-            More Filters <span class="dropdown">&#9662;</span>
+        <div class ="filter-tag">
+            <select class = "dropdown" id="property-type">
+                <option>Property Type</option>
+                <option value="flat">Flat</option>
+                <option value="house">House</option>
+                <option value="villa">Villa</option>   
+             </select>
         </div>
+        <div class ="filter-tag">
+            <select class = "dropdown" id="flat-bhk">
+                <option>BHK</option>
+                <option value="1bhk">1 BHK</option>
+                <option value="2bhk">2 BHK</option>
+                <option value="3bhk">3 BHK</option>
+                <option value="4bhk">4 BHK</option>   
+                 <option value="5bhk">5 BHK</option>   
+
+             </select>
+        </div>
+        
+        
+        
     </div>
 
-    <!--Property Cards (1 example shown)-->
     <div class="property-container">
         <div class="property-card">
             <div class="left-section">
@@ -110,160 +128,16 @@
                 <button class="btn secondary">Get Phone No.</button>
             </div>
         </div>
-        <div class="property-card">
-            <div class="left-section">
-                <div class="property-image">
-                    <img src="pic1.jpg" alt="Property Image">
-                </div>
-                <div class="owner-info">
-                    <p>Owner: Sridharan Vallabhaneni</p>
-                </div>
-            </div>
-            <div class="middle-section">
-                <h3>Owner's 3 BHK Flat for Sale in Vajram Esteva Bellandur, Outer...</h3>
-                <p class="project-name">Vajram Esteva</p>
-                <div class="features">
-                    <div class="feature"><span>CARPET AREA</span><strong>1487 sqft</strong></div>
-                    <div class="feature"><span>TRANSACTION</span><strong>Resale</strong></div>
-                    <div class="feature"><span>STATUS</span><strong>Ready to Move</strong></div>
-                    <div class="feature"><span>FURNISHING</span><strong>Semi-Furnished</strong></div>
-                    <div class="feature"><span>FLOOR</span><strong>11 out of 12</strong></div>
-                    <div class="feature"><span>FACING</span><strong>West</strong></div>
-                </div>
-            </div>
-            <div class="right-section">
-                <div class="price-container">
-                    <h3 class="price">₹3.30 Cr</h3>
-                    <p class="price-per-sqft">₹15,551 per sqft</p>
-                </div>
-                <button class="btn primary">Contact Owner</button>
-                <button class="btn secondary">Get Phone No.</button>
-            </div>
+        <div class="property-container">
+            <div id="cards"></div>
         </div>
-        <div class="property-card">
-            <div class="left-section">
-                <div class="property-image">
-                    <img src="pic1.jpg" alt="Property Image">
-                </div>
-                <div class="owner-info">
-                    <p>Owner: Sridharan Vallabhaneni</p>
-                </div>
-            </div>
-            <div class="middle-section">
-                <h3>Owner's 3 BHK Flat for Sale in Vajram Esteva Bellandur, Outer...</h3>
-                <p class="project-name">Vajram Esteva</p>
-                <div class="features">
-                    <div class="feature"><span>CARPET AREA</span><strong>1487 sqft</strong></div>
-                    <div class="feature"><span>TRANSACTION</span><strong>Resale</strong></div>
-                    <div class="feature"><span>STATUS</span><strong>Ready to Move</strong></div>
-                    <div class="feature"><span>FURNISHING</span><strong>Semi-Furnished</strong></div>
-                    <div class="feature"><span>FLOOR</span><strong>11 out of 12</strong></div>
-                    <div class="feature"><span>FACING</span><strong>West</strong></div>
-                </div>
-            </div>
-            <div class="right-section">
-                <div class="price-container">
-                    <h3 class="price">₹3.30 Cr</h3>
-                    <p class="price-per-sqft">₹15,551 per sqft</p>
-                </div>
-                <button class="btn primary">Contact Owner</button>
-                <button class="btn secondary">Get Phone No.</button>
-            </div>
-        </div>
-        <div class="property-card">
-            <div class="left-section">
-                <div class="property-image">
-                    <img src="pic1.jpg" alt="Property Image">
-                </div>
-                <div class="owner-info">
-                    <p>Owner: Sridharan Vallabhaneni</p>
-                </div>
-            </div>
-            <div class="middle-section">
-                <h3>Owner's 3 BHK Flat for Sale in Vajram Esteva Bellandur, Outer...</h3>
-                <p class="project-name">Vajram Esteva</p>
-                <div class="features">
-                    <div class="feature"><span>CARPET AREA</span><strong>1487 sqft</strong></div>
-                    <div class="feature"><span>TRANSACTION</span><strong>Resale</strong></div>
-                    <div class="feature"><span>STATUS</span><strong>Ready to Move</strong></div>
-                    <div class="feature"><span>FURNISHING</span><strong>Semi-Furnished</strong></div>
-                    <div class="feature"><span>FLOOR</span><strong>11 out of 12</strong></div>
-                    <div class="feature"><span>FACING</span><strong>West</strong></div>
-                </div>
-            </div>
-            <div class="right-section">
-                <div class="price-container">
-                    <h3 class="price">₹3.30 Cr</h3>
-                    <p class="price-per-sqft">₹15,551 per sqft</p>
-                </div>
-                <button class="btn primary">Contact Owner</button>
-                <button class="btn secondary">Get Phone No.</button>
-            </div>
-        </div>
-        <div class="property-card">
-            <div class="left-section">
-                <div class="property-image">
-                    <img src="pic1.jpg" alt="Property Image">
-                </div>
-                <div class="owner-info">
-                    <p>Owner: Sridharan Vallabhaneni</p>
-                </div>
-            </div>
-            <div class="middle-section">
-                <h3>Owner's 3 BHK Flat for Sale in Vajram Esteva Bellandur, Outer...</h3>
-                <p class="project-name">Vajram Esteva</p>
-                <div class="features">
-                    <div class="feature"><span>CARPET AREA</span><strong>1487 sqft</strong></div>
-                    <div class="feature"><span>TRANSACTION</span><strong>Resale</strong></div>
-                    <div class="feature"><span>STATUS</span><strong>Ready to Move</strong></div>
-                    <div class="feature"><span>FURNISHING</span><strong>Semi-Furnished</strong></div>
-                    <div class="feature"><span>FLOOR</span><strong>11 out of 12</strong></div>
-                    <div class="feature"><span>FACING</span><strong>West</strong></div>
-                </div>
-            </div>
-            <div class="right-section">
-                <div class="price-container">
-                    <h3 class="price">₹3.30 Cr</h3>
-                    <p class="price-per-sqft">₹15,551 per sqft</p>
-                </div>
-                <button class="btn primary">Contact Owner</button>
-                <button class="btn secondary">Get Phone No.</button>
-            </div>
-        </div>
-        <div class="property-card">
-            <div class="left-section">
-                <div class="property-image">
-                    <img src="pic1.jpg" alt="Property Image">
-                </div>
-                <div class="owner-info">
-                    <p>Owner: Sridharan Vallabhaneni</p>
-                </div>
-            </div>
-            <div class="middle-section">
-                <h3>Owner's 3 BHK Flat for Sale in Vajram Esteva Bellandur, Outer...</h3>
-                <p class="project-name">Vajram Esteva</p>
-                <div class="features">
-                    <div class="feature"><span>CARPET AREA</span><strong>1487 sqft</strong></div>
-                    <div class="feature"><span>TRANSACTION</span><strong>Resale</strong></div>
-                    <div class="feature"><span>STATUS</span><strong>Ready to Move</strong></div>
-                    <div class="feature"><span>FURNISHING</span><strong>Semi-Furnished</strong></div>
-                    <div class="feature"><span>FLOOR</span><strong>11 out of 12</strong></div>
-                    <div class="feature"><span>FACING</span><strong>West</strong></div>
-                </div>
-            </div>
-            <div class="right-section">
-                <div class="price-container">
-                    <h3 class="price">₹3.30 Cr</h3>
-                    <p class="price-per-sqft">₹15,551 per sqft</p>
-                </div>
-                <button class="btn primary">Contact Owner</button>
-                <button class="btn secondary">Get Phone No.</button>
-            </div>
-        </div>
+        
+        
 
-        <!-- Repeat property-card for other properties... -->
     </div>
-
+    <script type="module" src="firebase-config.js"></script>
+<script type="module" src="Page.js"></script>
+<script type="module" src="script.js"></script>
 </body>
 
 </html>
