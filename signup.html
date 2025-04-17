@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="signup.css">
+
+</head>
+<body>
+    <section class="container">
+        <div class="conatiner-image">
+            <img src = "./assets/pexels-photo-106399.jpeg">
+
+        </div>
+        <div class="login--form">
+            <h1>Register Form</h1>
+            <img class="logo" src="./assets/logo.png">
+
+            <form id = 'signup-form'>
+                <label>UserName</label>
+                <input type = "text" id="username" placeholder="Enter Your Name">
+                <br>
+                <br>
+                <label>Email</label>
+                <input type = "email" id="useremail" placeholder="Enter Your Email">
+                <br>
+                <br>
+                <label>Password</label>
+                
+                <input type = "password" id="userpassword" placeholder="Enter Your Password">
+                <br>
+                <br>
+                <label>Confirm Password</label>
+                
+                <input type = "password" id="userconfirmpassword" placeholder="Re Password">
+                <br>
+                <br>
+                <label>Select Role</label>
+                <select id="signup-option">
+
+                    <option value="users">Users</option>
+                    <option value="admin">Admin</option>
+                </select>
+                <br>
+                <button type="submit" id="signup-btn" class="btn">Register</button>
+               
+            </form>
+            <span>Already Have Account <a href="login.html">Login</a></span>
+            <div id = "status"></div>
+
+        </div>
+    </section>
+    <script type="module" src="firebase-config.js"></script>
+
+    <script type="module" src="auth.js"></script>
+</body>
+</html>
