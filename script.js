@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
-    
 
     // Property type selection
     function setupPropertySelection() {
@@ -95,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (currentPage === 'index.html') {
             if (tabHref === '#') {
-                tab.classList.remove('active');
+                tab.classList.add('active');
             }
         } else if (tabHref === currentPage) {
             tab.classList.add('active');
@@ -119,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 loop: true,
                 centeredSlides: true,
                 autoplay: {
-                    delay: 2000,
+                    delay: 3000,
                     disableOnInteraction: false,
                 },
                 pagination: {
@@ -185,7 +184,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
 import { auth } from "./firebase-config.js";
 import{onAuthStateChanged} from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js"; 
 onAuthStateChanged(auth,(user)=>{
@@ -204,24 +202,3 @@ onAuthStateChanged(auth,(user)=>{
     }
 })
 
-let login = document.getElementById('login');
-let signup = document.getElementById('signup');
-let buy = document.getElementById('buy');
-let rent  = document.getElementById('rent');
-document.querySelectorAll('a').forEach(link=>{
-    link.addEventListener('click',(e)=>{
-        e.preventDefault();
-        if(login){
-            window.location.href ='login.html';
-        }
-        if(signup){
-            window.location.href ='signup.html';
-        }
-        if(buy){
-            window.location.href ='Page.html';
-        }
-        if(rent){
-            window.location.href ='Page.html';
-        }
-    })
-})
