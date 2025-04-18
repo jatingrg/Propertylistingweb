@@ -2,10 +2,9 @@
 header {
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-    padding:0px;
-
+    
+    margin-top: -28px;
     top: 0;
-    margin-top: -30px;
   }
   
   .header-container {
@@ -22,6 +21,7 @@ header {
   
   .logo img {
     height: 60px;
+
   }
   
   /* Navbar Tabs - Fixed Version */

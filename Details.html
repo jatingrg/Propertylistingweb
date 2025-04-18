@@ -11,7 +11,7 @@
     <header>
         <div class="container header-container">
             <div class="logo">
-                <img src="Propertylistingweb\assets\logo.png" alt="KeyVista Logo" />
+                <img src="assets/logo.png" alt="KeyVista Logo" />
             </div>
             <nav class="nav-tabs">
                 <a href="Page.html" id="buy" class="active">Buy</a>
@@ -27,53 +27,11 @@
     </header>
 
   <div class="container">
-    <div class="listing" style="display: flex; gap: 20px;">
-      
-      <!-- Image on Left -->
-      <div class="image" style="flex: 1;">
-        <img src="Propertylistingweb/assets/pic1.jpg" alt="Property" style="width: 100%; height: auto; border-radius: 10px;" />
-      </div>
-      
-      <!-- Details on Right -->
-      <div class="details" style="flex: 2;">
-        <div class="price-title">
-          ₹1.30 Cr <span class="subtext">| EMI - ₹59k |</span>
-        </div>
-        <div class="meta">
-          3 BHK Flat For Sale in Elite Homes, 
-          <strong>Hennur Main Road, Bangalore</strong>
-        </div>
+     <div id = "property-details">
 
-        <div class="features">
-          <div class="feature-item">🛏 3 Beds</div>
-          <div class="feature-item">🛁 3 Baths</div>
-          <div class="feature-item">🌇 3 Balconies</div>
-          <div class="feature-item">🚪 Unfurnished</div>
-        </div>
-
-        <div class="info-grid">
-          <div class="info-item"><strong>Carpet Area:</strong> 1300 sqft</div>
-          <div class="info-item"><strong>Developer:</strong> Aadhava Developers</div>
-          <div class="info-item"><strong>Project:</strong> Elite Homes</div>
-          <div class="info-item"><strong>Floor:</strong> 2 (Out of 4 Floors)</div>
-          <div class="info-item"><strong>Transaction Type:</strong> New Property</div>
-          <div class="info-item"><strong>Status:</strong> Ready to Move</div>
-          <div class="info-item"><strong>Facing:</strong> East</div>
-          <div class="info-item"><strong>Furnished Status:</strong> Unfurnished</div>
-          <div class="info-item"><strong>Ownership Type:</strong> Freehold</div>
-        </div>
-
-        <div class="tags">
-          <span class="tag success">✔️ East Facing Property</span>
-          <span class="tag info">✨ Newly Constructed Property</span>
-        </div>
-
-        <div class="actions">
-          <button class="btn primary">Contact Owner</button>
-        </div>
-      </div>
-
-    </div>
+     </div>
   </div>
+  <script type="module" src="firebase-config.js"></script>
+  <script  type="module"  src="details.js"></script>
 </body>
 </html>

@@ -37,12 +37,13 @@ async function fetchProperties() {
       (!selected.locality || data.location?.toLowerCase().includes(selected.locality));
 
     if (matches) {
-      displayProperty(data);
+      displayProperty(data,doc.id);
     }
   });
 }
 
-function displayProperty(data) {
+function displayProperty(data,id) {
+console.log(data.id)
   const propertyCard = `
     <div class="property-card">
         <div class="left-section">
@@ -75,7 +76,7 @@ function displayProperty(data) {
             </div>
             <button class="btn primary">Contact Owner</button>
             <button class="btn secondary">Get Phone No.</button>
-            <button class = "btn view-btn" data-id="${data.id}">view</button>
+            <button class = "btn view-btn" data-id="${id}">view</button>
         </div>
     </div>
   `;
@@ -83,7 +84,12 @@ function displayProperty(data) {
   list.innerHTML += propertyCard;
 }
 
-
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("view-btn")) {
+    const propertyId = e.target.getAttribute("data-id");
+    window.location.href = `Details.html?id=${propertyId}`;
+  }
+});
 Object.values(filters).forEach((dropdown) => {
   dropdown.addEventListener("change", fetchProperties);
 });
