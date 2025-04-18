@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+    
 
     // Property type selection
     function setupPropertySelection() {
@@ -93,8 +94,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const tabHref = tab.getAttribute('href');
         
         if (currentPage === 'index.html') {
-            if (tabHref === '#' || tab.textContent.trim() === 'Buy') {
-                tab.classList.add('active');
+            if (tabHref === '#') {
+                tab.classList.remove('active');
             }
         } else if (tabHref === currentPage) {
             tab.classList.add('active');
@@ -118,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 loop: true,
                 centeredSlides: true,
                 autoplay: {
-                    delay: 3000,
+                    delay: 2000,
                     disableOnInteraction: false,
                 },
                 pagination: {
@@ -183,6 +184,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
 
 import { auth } from "./firebase-config.js";
 import{onAuthStateChanged} from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js"; 

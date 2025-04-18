@@ -78,7 +78,7 @@ header {
   padding: 80px 0;
   text-align: center;
   position: relative;
-  filter: grayscale(80%);
+  filter: grayscale(50%);
 }
 
 .hero h1 {
@@ -754,3 +754,10 @@ header {
   max-height: 200px;
   opacity: 1;
 }
+
+
+
+
+
+
+
