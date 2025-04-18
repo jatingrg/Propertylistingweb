@@ -68,7 +68,44 @@ header {
   background-color: #235784 !important; /* Blue background */
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+.account-coantainer{
+  display: flex;
+  flex-direction: row;
+}
+.account-coantainer-image {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  width: 50px;
+}
+.account-coantainer-image > img{
+    height: 50px;
+    width: 50px;
+}
 
+/* Style for the username tab */
+#usernameappend.username-tab {
+  color: #555;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: default; /* Since it's not a clickable link */
+}
+
+/* Hover effect (optional) */
+#usernameappend.username-tab:hover {
+  color: #235784;
+  background-color: transparent;
+}
+
+/* If you want it to look "active" when displayed */
+#usernameappend.username-tab.active {
+  color: white !important;
+  background-color: #235784 !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
 /* Hero Section */
 .hero {
@@ -754,10 +791,4 @@ header {
   max-height: 200px;
   opacity: 1;
 }
-
-
-
-
-
-
 
