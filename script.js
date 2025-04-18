@@ -80,16 +80,35 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
         
-        // Navigation tabs
-        const navTabs = document.querySelectorAll('.nav-tabs a');
-        navTabs.forEach(tab => {
-            tab.addEventListener('click', function(e) {
+       
+    // Navigation tabs
+    const navTabs = document.querySelectorAll('.nav-tabs a');
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    
+    // First reset all tabs
+    navTabs.forEach(tab => tab.classList.remove('active'));
+    
+    // Then set the correct active tab
+    navTabs.forEach(tab => {
+        const tabHref = tab.getAttribute('href');
+        
+        if (currentPage === 'index.html') {
+            if (tabHref === '#' || tab.textContent.trim() === 'Buy') {
+                tab.classList.add('active');
+            }
+        } else if (tabHref === currentPage) {
+            tab.classList.add('active');
+        }
+        
+        tab.addEventListener('click', function(e) {
+            if (tabHref === '#') {
                 e.preventDefault();
-                navTabs.forEach(t => t.classList.remove('active'));
-                this.classList.add('active');
-            });
+            }
+            navTabs.forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
         });
-    }
+    });
+}
 
     // Testimonial Swiper
     function initTestimonialSwiper() {
