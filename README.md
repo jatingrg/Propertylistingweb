@@ -65,6 +65,9 @@ To build a frontend real estate listing platform where users can easily search, 
 
 ## 👤 User Flow Diagram
 
+![User and Admin Flow Diagram](./assets/UML.png)
+
+
 ### 👥 Roles
 
 #### 1. **User**
