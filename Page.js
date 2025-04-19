@@ -51,7 +51,7 @@ console.log(data.id)
                 <img src="${data.imageUrl || 'pic1.jpg'}" alt="Property Image">
             </div>
             <div class="owner-info">
-                <p>Owner: ${data.adminId || 'N/A'}</p>
+                <p>Owner: Ajeet Singh</p>
             </div>
         </div>
         <div class="middle-section">
@@ -60,11 +60,6 @@ console.log(data.id)
             <p class="project-name">${data.project || ''}</p>
             <div class="features">
                 <div class="feature"><span>Location</span><strong>${data.location}</strong></div>
-                <div class="feature"><span>TRANSACTION</span><strong>${data.transaction}</strong></div>
-                <div class="feature"><span>STATUS</span><strong>${data.status}</strong></div>
-                <div class="feature"><span>FURNISHING</span><strong>${data.furnishing}</strong></div>
-                <div class="feature"><span>FLOOR</span><strong>${data.floor}</strong></div>
-                <div class="feature"><span>FACING</span><strong>${data.facing}</strong></div>
                 <div class="feature"><span>CATEGORY</span><strong>${data.category}</strong></div>
                 <div class="feature"><span>BHK</span><strong>${data.bhk}</strong></div>
             </div>
@@ -74,7 +69,7 @@ console.log(data.id)
                 <h3 class="price">₹${data.price}</h3>
                 <p class="price-per-sqft">₹${data.pricePerSqft} per sqft</p>
             </div>
-            <button class="btn primary">Contact Owner</button>
+            <button class="btn primary"><a href="contact.html">Contact Owner</a></button>
             <button class="btn secondary">Get Phone No.</button>
             <button class = "btn view-btn" data-id="${id}">view</button>
         </div>
