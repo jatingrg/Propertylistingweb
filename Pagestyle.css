@@ -42,7 +42,10 @@ body {
 .checkbox.checked {
     font-weight: bold;
 }
-
+a{
+  text-decoration: none;
+  color: white;
+}
 /* Property card */
 .property-card {
     background-color: #fff;
