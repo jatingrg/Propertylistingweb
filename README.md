@@ -75,7 +75,7 @@ To build a frontend real estate listing platform where users can easily search, 
 - View property details → Contact agent or save property
 - Compare properties → Submit inquiry
 
-#### 2. **Admin** *(if integrated later)*
+#### 2. **Admin** 
 - Add/edit/delete property listings
 - Manage media and inquiries
 - Moderate property content
